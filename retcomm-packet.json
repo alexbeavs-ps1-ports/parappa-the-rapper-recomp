@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "parappa-the-rapper-psx",
+  "name": "PaRappa the Rapper",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "parappa-the-rapper-recomp",
+  "rom_identity": {
+    "crc32": [
+      "d94ea30c"
+    ],
+    "md5": [
+      "007a1016d499e5fe6eb2702f41ca6c63"
+    ],
+    "sha1": [
+      "181e2efd2a29c028b28e52ac7827ef7a172ca8b4"
+    ],
+    "disc_serials": [
+      "SCUS-94183"
+    ],
+    "sizes": [
+      727718208
+    ],
+    "filenames": [
+      "PaRappa the Rapper (USA) (En,Fr,De,Es,It).cue",
+      "PaRappa the Rapper (USA) (En,Fr,De,Es,It).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "disc_fps": [
+      "3cd769379e534282bbbf04077bbd4caa00500bc3b1e6af04f80db8a2930bff68"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH1001.BIN",
+    "profile": "SCPH1001",
+    "crc32": [
+      "37157331"
+    ],
+    "md5": [
+      "924e392ed05558ffdb115408c263dccf"
+    ],
+    "sha1": [
+      "10155d8d6e6e832d6ea66db9bc098321fb5e8ebf"
+    ],
+    "sha256": [
+      "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH1001.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/parappa-the-rapper-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "parappa-the-rapper-*-windows-x64.zip",
+      "linux-x64": "parappa-the-rapper-*-linux-x64.zip",
+      "macos-arm64": "parappa-the-rapper-*-macos-arm64.zip",
+      "macos-x64": "parappa-the-rapper-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "parappa_the_rapper.exe",
+    "linux": "parappa_the_rapper",
+    "macos": "parappa_the_rapper"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/parappa-the-rapper-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}
